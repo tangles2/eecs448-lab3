@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link href="stylesheet.css" rel="stylesheet"/>
+        <meta charset="urt-8">
+        <title>Thomas Angles' Password Validator</title>
+    </head>
+    <body>
+
+        <p>Please enter your password (at least 8 characters)</p>
+        Password:
+        &emsp;
+        &emsp;
+        &emsp;
+        &emsp;
+        <input type="password" id="Input">
+        <span id="passwordBox"></span>
+        <br>
+        <br>
+        Verify your password :
+        <input type="password" id="validate">
+        <span id="VerifyPass"></span>
+        <br>
+        <br>
+        <button type="submit" onclick="passValidate()">Validate</button>
+        <script src="main.js"></script>
+        <script>
+            function passValidate()
+            {
+                var password = document.getElementById("Input").value;
+                var checkpass = document.getElementById("validate").value;
+
+                        if(password.length < 8 || checkpass.length < 8)
+                        {
+                            alert("Please enter a password that is at least 8 characters.");
+                            {
+                                    if(password != checkpass)
+                                    {
+                                        alert("Cannot validate password")
+                                    }
+                            }
+                        }
+                        else if (password.length < 8 || checkpass.length < 8)
+                        {
+                            alert("Please enter a password that is at least 8 characters.")
+                        }
+                        else if (password != checkpass)
+                        {
+                            alert("Password does not match")
+                        }
+                        else
+                        {
+                            alert ("Password is match!")
+                        }
+
+
+            }
+
+        </script>
+    </body>
+</html>
